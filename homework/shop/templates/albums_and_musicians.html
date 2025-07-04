@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Albums and musicians{% endblock %}
+
+{% block content %}
+  <table>
+    <tr>
+      <td>Album</td>
+      <td>Creation date</td>
+      <td>Musician</td>
+    </tr>
+    {% for album in albums %}
+      <tr>
+        <td>{{album.name_album}}</td>
+        <td>{{album.created_at}}</td>
+        <td>{{album.musician}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
